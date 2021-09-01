@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance" 
+   xmlns:aop = "http://www.springframework.org/schema/aop"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd 
+   http://www.springframework.org/schema/aop 
+   http://www.springframework.org/schema/aop/spring-aop-3.0.xsd ">
+ 
+ 
+    <aop:aspectj-autoproxy />
+    
+    <bean name="customer" class="in.javaport.model.Customer">
+    <property name="name" value="I am a customer" />
+    </bean>
+    <bean name="employee" class="in.javaport.model.Employee">
+    <property name="name" value="I am an employee" />
+    </bean>
+    
+    <bean name="service" class="in.javaport.service.PeopleService" autowire="byName"></bean>
+    
+    <!--<bean name="loggingAspect" class="in.javaport.aspect.LoggingAspect"></bean>-->
+    <!--<bean name="loggingAspect2" class="in.javaport.aspect.LoggingAspect2"></bean>-->
+    <bean name="loggingAspect3" class="in.javaport.aspect.LoggingAspect3"></bean>
+    <!--<bean name="loggingAspect4" class="in.javaport.aspect.LoggingAspect4"></bean>-->
+    </beans>
